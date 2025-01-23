@@ -1,3 +1,7 @@
+[![Open in GitHub Codespaces](
+  https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
+  https://codespaces.new/dwave-training/knapsack-nl?quickstart=1)
+
 # knapsack-nl
 A collection of $n$ objects is to be shipped, where each object has a weight $w_i$ and a value $v_i$. The goal is to pack a shipping container such that the total weight does not exceed the capacity $W$, and at most two items can be included in the container. Determine which items should be selected to maximize the total value of the container. Let $x_i$ represent whether object i is in included in the knapsack or not.
 
