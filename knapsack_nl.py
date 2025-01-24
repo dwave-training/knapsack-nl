@@ -43,7 +43,7 @@ def build_nl(values, weights, capacity, max_items_allowed):
             	A 1 D array-like (row vector) listing the weight of each item
             
         capacity:
-		Maximum weight of the knapsack that can't be exceeded
+		Maximum weight the container can hold
                
         max_items_allowed:
 		The maximum number of items that can be included in the container
