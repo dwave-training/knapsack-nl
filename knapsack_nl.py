@@ -46,7 +46,7 @@ def build_nl(values, weights, capacity, nbr_items_allowed):
 			Maximum weight of the knapsack that can't be exceeded
                
         nbr_items_allowed:
-			The maximum number of how many items can be included in the container
+			The maximum number of items that can be included in the container
                
     Returns:
 		A model encoding the knapsack problem
