@@ -18,7 +18,7 @@ $$ \min - \sum_{i=0}^{n-1} v_i x_i $$
 $$  \sum_{i=0}^{n-1} x_i  \leq 2$$
 
 
-For this exercise, we will learn how to build the knapsack problem using the nonlinear model. Open up the code file `knapsack_nl.py`.  We created an array of binary variable symbols for five items. The value and weight of each item are defined in the values and weights constant symbols. The maximum capacity of the knapsack is set to 10. 
+This is an example of the knapsack problem. In this exercise, we will learn how to build this problem using the nonlinear model. Open the `knapsack_nl.py` code file.  We have created an array of binary variable symbols for five items. The value and weight of each item is defined in the values and weights constant symbols. The maximum capacity of the container is set to 10. 
 
 You will need to fill in the `set_sampler`and `build_nl` functions. Here are the instructions to follow:
 
