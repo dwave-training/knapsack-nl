@@ -25,7 +25,7 @@ def set_sampler():
     return sampler
 
 def build_nl(values, weights, capacity, nbr_items_allowed):
-	""" Build the NL for our problem
+	""" Build the NL model for our problem
 
     Requirements:
         Objective: 
