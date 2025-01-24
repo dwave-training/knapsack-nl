@@ -24,7 +24,7 @@ def set_sampler():
 
     return sampler
 
-def build_nl(values, weights, capacity, nbr_items_allowed):
+def build_nl(values, weights, capacity, max_items_allowed):
 	""" Build the NL model for our problem
 
     Requirements:
@@ -33,20 +33,20 @@ def build_nl(values, weights, capacity, nbr_items_allowed):
             
         Constraints:
             - Total weight of the shipped container should not exceed the capacity weight
-            - At most two items can be included in the container
+            - At most max_items_allowed can be included in the container
             
     Args:
         values:
-            A 1 D array-like (row vector) listing the value of each item
+        	A 1 D array-like (row vector) listing the value of each item
             
         weights:
-            A 1 D array-like (row vector) listing the weight of each item
+            	A 1 D array-like (row vector) listing the weight of each item
             
         capacity:
-			Maximum weight of the knapsack that can't be exceeded
+		Maximum weight of the knapsack that can't be exceeded
                
-        nbr_items_allowed:
-			The maximum number of items that can be included in the container
+        max_items_allowed:
+		The maximum number of items that can be included in the container
                
     Returns:
 		A model encoding the knapsack problem
@@ -63,7 +63,7 @@ def build_nl(values, weights, capacity, nbr_items_allowed):
 	values = model.constant(values)
 	weights = model.constant(weights)
 	capacity = model.constant(capacity)
-	nbr_items_allowed = model.constant(nbr_items_allowed)
+	max_items_allowed = model.constant(max_items_allowed)
 
 	## TODO: Set the objective mentioned in the README
 	
@@ -92,10 +92,10 @@ if __name__ == "__main__":
 	values = [34, 25, 78, 21, 64]
 	weights = [3, 5, 9, 4, 2]
 	W = 10
-	two_constant = 2
+	max_items_allowed = 2
 
 	## Construct the model
-	model = build_nl(values,weights,W,two_constant)
+	model = build_nl(values,weights,W,max_items_allowed)
 	
 	## ------- Run on the QPU -------
 	sampler = set_sampler()
