@@ -95,7 +95,7 @@ if __name__ == "__main__":
 	max_items_allowed = 2
 
 	## Construct the model
-	model = build_nl(values,weights,W,max_items_allowed)
+	model = build_nl(values, weights, W, max_items_allowed)
 	
 	## ------- Run on the QPU -------
 	sampler = set_sampler()
