@@ -1,4 +1,4 @@
-# Copyright 2020 D-Wave Systems Inc.
+# Copyright 2025 D-Wave
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,38 +17,38 @@
 
 
 def set_sampler():
-    """Return a sampler"""
+	"""Return a sampler"""
 
 	## TODO: Import the package and add sampler here
     
 
-    return sampler
+	return sampler
 
 def build_nl(values, weights, capacity, max_items_allowed):
 	""" Build the NL model for our problem
 
-    Requirements:
-        Objective: 
-            - Maximize the total value of the container
+	Requirements:
+		Objective: 
+			- Maximize the total value of the container
             
-        Constraints:
-            - Total weight of the shipped container should not exceed the capacity weight
-            - At most max_items_allowed can be included in the container
+		Constraints:
+			- Total weight of the shipped container should not exceed the capacity weight
+			- At most max_items_allowed can be included in the container
             
-    Args:
-        values:
-        	A 1 D array-like (row vector) listing the value of each item
+	Args:
+		values (list):
+			A 1 D array-like (row vector) listing the value of each item
             
-        weights:
-            	A 1 D array-like (row vector) listing the weight of each item
+		weights (list):
+			A 1 D array-like (row vector) listing the weight of each item
             
-        capacity:
-		Maximum weight the container can hold
+		capacity (int):
+			Maximum weight the container can hold
                
-        max_items_allowed:
-		The maximum number of items that can be included in the container
+		max_items_allowed (int):
+			The maximum number of items that can be included in the container
                
-    Returns:
+	Returns:
 		A model encoding the knapsack problem
     """
    
@@ -75,15 +75,15 @@ def build_nl(values, weights, capacity, max_items_allowed):
 	return model
 
 def solve_problem(model, sampler):
-    """Run the provided NL object on the designated sampler"""
+	"""Run the provided NL object on the designated sampler"""
 
-    # Initialize the NL solver
-    sampler = set_sampler()
+	# Initialize the NL solver
+	sampler = set_sampler()
 
-    # Solve the problem using the NL solver
-    sampleset = sampler.sample(model, label='Knapsack using NL solver')
+	# Solve the problem using the NL solver
+	sampleset = sampler.sample(model, label='Knapsack using NL solver')
 
-    return sampleset
+	return sampleset
 
 ## ------- Main program -------
 if __name__ == "__main__":
