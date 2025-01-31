@@ -105,4 +105,3 @@ if __name__ == "__main__":
     with model.lock():
         current_state = 0
         print(f"For state {current_state}, {list(sym.state(current_state) for sym in model.iter_decisions())} results in objective {model.objective.state(current_state)}")
-git branch -a -v
