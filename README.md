@@ -34,8 +34,3 @@ You will need to fill in the `set_sampler`and `build_nl` functions. Here are the
       - Set the objective function in the NL model
 
       - Add the two constraints to the NL model
-
-
-## License
-
-Released under the Apache License 2.0. See [LICENSE](LICENSE) file.
