@@ -96,7 +96,7 @@ if __name__ == "__main__":
     ## Construct the model
     model = build_nl(values, weights, W, max_items_allowed)
 	
-    ## ------- Run on the QPU -------
+    ## ------- Run on the Stride hybrid solver -------
     sampler = set_sampler()
 
     sampleset = solve_problem(model, sampler)
